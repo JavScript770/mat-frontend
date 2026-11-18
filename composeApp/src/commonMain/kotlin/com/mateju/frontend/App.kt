@@ -17,6 +17,13 @@ import com.mateju.frontend.ui.LoginPresenter
 import com.mateju.frontend.ui.LoginScreen
 import com.mateju.frontend.ui.ProfessorDashboard
 import com.mateju.frontend.ui.StudentDashboard
+import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.padding
+import androidx.compose.ui.Alignment
+import androidx.compose.ui.Modifier
+import androidx.compose.ui.unit.dp
+import com.mateju.frontend.ui.SensorCard
 
 @Composable
 fun MatejuApp() {
@@ -44,10 +51,18 @@ fun MatejuApp() {
                 onPasswordChange = presenter::updatePassword,
                 onLogin = presenter::login,
             )
-            else -> when (activeSession.role) {
-                UserRole.STUDENT -> StudentDashboard(activeSession, logout)
-                UserRole.PROFESSOR -> ProfessorDashboard(activeSession, logout)
-                UserRole.ADMIN -> AdminDashboard(activeSession, logout)
+            else -> Box(Modifier.fillMaxSize()) {
+                when (activeSession.role) {
+                    UserRole.STUDENT -> StudentDashboard(activeSession, logout)
+                    UserRole.PROFESSOR -> ProfessorDashboard(activeSession, logout)
+                    UserRole.ADMIN -> AdminDashboard(activeSession, logout)
+                }
+                // Tarjeta del acelerómetro, flotando en la parte inferior
+                SensorCard(
+                    modifier = Modifier
+                        .align(Alignment.BottomCenter)
+                        .padding(16.dp),
+                )
             }
         }
     }

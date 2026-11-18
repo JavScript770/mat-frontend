@@ -35,7 +35,7 @@ fun MatejuApp() {
         presenter.reset()
         session = null
     }
-
+// ay dios mio
     MaterialTheme {
         when (val activeSession = session) {
             null -> LoginScreen(

@@ -52,7 +52,7 @@ android {
     defaultConfig {
         applicationId = "com.mateju.frontend"
         minSdk = 24
-        targetSdk = 37
+        targetSdk = 36
         versionCode = 1
         versionName = "0.1.0"
     }

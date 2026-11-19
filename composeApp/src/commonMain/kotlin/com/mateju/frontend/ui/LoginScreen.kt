@@ -56,7 +56,7 @@ fun LoginScreen(
                     color = Color(0xFF168A4A),
                 )
                 Text(
-                    text = "Tapia Montalvo Axel ",
+                    text = "Hola que hace",
                     style = MaterialTheme.typography.titleMedium,
                 )
                 Text(

@@ -56,7 +56,7 @@ fun LoginScreen(
                     color = Color(0xFF168A4A),
                 )
                 Text(
-                    text = "Aprende, practica y avanza en la universidad.",
+                    text = "Tapia Montalvo Axel ",
                     style = MaterialTheme.typography.titleMedium,
                 )
                 Text(

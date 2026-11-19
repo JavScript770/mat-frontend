@@ -56,7 +56,7 @@ fun LoginScreen(
                     color = Color(0xFF168A4A),
                 )
                 Text(
-                    text = "Hola que hace",
+                    text = "Hola que hacesss",
                     style = MaterialTheme.typography.titleMedium,
                 )
                 Text(
